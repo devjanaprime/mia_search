@@ -1,0 +1,16 @@
+{
+  "name": "mia_api_template",
+  "version": "1.0.0",
+  "description": "a Node/Express template to access Minneapolis Institute of Arts API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "author": "@devjana",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
+}
