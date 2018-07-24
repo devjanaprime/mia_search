@@ -1,16 +1,16 @@
 const router = require( 'express' ).Router();
+const axios = require( 'axios' );
 
 router.get( '/', ( req, res ) =>{
-    console.log( '/ GET request:', req.query );
+    console.log( '/ GET request:', req.query.search );
     let url = 'https://search.artsmia.org/' + req.query.search;
     axios.get( url )
-    .then( res => {
-      response.send( res.data );
+    .then( ( response ) => {
+      res.send( response.data );
     })
-    .catch ( error => {
-      console.log('Error on giphy request', error);
+    .catch ( ( err ) => {
+      console.log( 'Error on API request', err );
     })
-    res.send( 'meow' );
 }) // end / GET
 
 module.exports = router;
