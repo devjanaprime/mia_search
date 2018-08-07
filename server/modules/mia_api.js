@@ -11,6 +11,7 @@ router.get( '/', ( req, res ) =>{
     .catch ( ( err ) => {
       console.log( 'Error on API request', err );
     })
+    
 }) // end / GET
 
 module.exports = router;
